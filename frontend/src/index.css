@@ -1,0 +1,2620 @@
+@import "tailwindcss";
+/* ==========================================
+   SEMANTIC CSS CLASSES - RAAJESHWARY HALL
+   ========================================== */
+
+/* ==========================================
+   GLOBAL CONTAINER CLASSES
+   ========================================== */
+.pageContainer {
+  max-width: 80rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+/* ==========================================
+   SECTION HEADER STYLES
+   ========================================== */
+.sectionHeader {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.sectionTitle {
+  font-size: 2.25rem;
+  font-weight: bold;
+  color: #1f2937;
+  line-height: 1.2;
+}
+
+.sectionDescription {
+  margin-top: 1rem;
+  color: #4b5563;
+  max-width: 42rem;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 1.125rem;
+}
+
+/* ==========================================
+   FOOTER STYLES
+   ========================================== */
+.footerContainer {
+  background-color: #111827;
+  color: #d1d5db;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+.footerContentWrapper {
+  max-width: 80rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+.footerGridLayout {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.footerAboutColumn {
+  display: flex;
+  flex-direction: column;
+}
+
+.footerAboutTitle {
+  font-size: 1.125rem;
+  font-weight: bold;
+  color: white;
+  margin-bottom: 1rem;
+}
+
+.primaryText {
+  color: #f97316;
+}
+
+.onPrimaryText {
+  color: white;
+}
+
+.footerBottomLayout {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  text-align: center;
+}
+
+.footerCopyright {
+  font-size: 0.875rem;
+  text-align: center;
+}
+
+.footerCopyright.textLeft {
+  text-align: center;
+}
+
+.footerCopyright.textRight {
+  text-align: center;
+}
+
+.footerBottomLinks {
+  font-size: 0.875rem;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.footerBottomLinks.textRight {
+  justify-content: center;
+}
+
+.footerBottomLink {
+  color: #d1d5db;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footerBottomLink:hover {
+  color: #f97316;
+}
+
+.footerBottomSeparator {
+  color: #d1d5db;
+}
+
+/* ==========================================
+   NAVBAR/HEADER STYLES
+   ========================================== */
+.topNavbar {
+  width: 100%;
+  background-color: white;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  top: 0;
+  z-index: 50;
+}
+
+.navbarContainer {
+  max-width: 80rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  height: 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logoSection {
+  font-size: 1.25rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.brandNamePrimary {
+  color: #f97316;
+}
+
+.brandNameSecondary {
+  color: #4b5563;
+}
+
+.desktopNavMenu {
+  display: none;
+  gap: 2rem;
+  font-size: 0.875rem;
+  color: #4b5563;
+}
+
+@media (min-width: 768px) {
+  .desktopNavMenu {
+    display: flex;
+  }
+}
+
+.navLink {
+  text-decoration: none;
+  color: #4b5563;
+  transition: color 0.3s ease;
+}
+
+.navLink:hover {
+  color: #f97316;
+}
+
+.desktopAuthButtons {
+  display: none;
+  gap: 0.75rem;
+}
+
+@media (min-width: 768px) {
+  .desktopAuthButtons {
+    display: flex;
+  }
+}
+
+.loginButton {
+  border: 1px solid #f97316;
+  padding: 0.5rem 1rem;
+  border-radius: 0.375rem;
+  font-size: 0.875rem;
+  color: #f97316;
+  background-color: transparent;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.loginButton:hover {
+  background-color: #fef3c7;
+}
+
+.registerButton {
+  background-color: #f97316;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 0.375rem;
+  font-size: 0.875rem;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.registerButton:hover {
+  background-color: #ea580c;
+}
+
+.mobileMenuToggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #4b5563;
+  font-size: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .mobileMenuToggle {
+    display: none;
+  }
+}
+
+.mobileMenuPanel {
+  display: block;
+  background-color: white;
+  border-top: 1px solid #e5e7eb;
+}
+
+.mobileMenuContent {
+  padding: 1rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.mobileNavLink {
+  display: block;
+  color: #4b5563;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.mobileNavLink:hover {
+  color: #f97316;
+}
+
+.mobileAuthButtons {
+  display: flex;
+  gap: 0.75rem;
+  padding-top: 0.5rem;
+}
+
+.mobileAuthButtons {
+  display: flex;
+  gap: 0.75rem;
+  padding-top: 0.5rem;
+}
+
+.mobileLoginButton,
+.mobileRegisterButton {
+  flex: 1;
+  padding: 0.5rem 1rem;
+  border-radius: 0.375rem;
+  font-size: 0.875rem;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.mobileLoginButton {
+  border: 1px solid #f97316;
+  color: #f97316;
+  background-color: transparent;
+}
+
+.mobileLoginButton:hover {
+  background-color: #fef3c7;
+}
+
+.mobileRegisterButton {
+  background-color: #f97316;
+  color: white;
+}
+
+.mobileRegisterButton:hover {
+  background-color: #ea580c;
+}
+
+.mobileLoginButton,
+.mobileRegisterButton {
+  flex: 1;
+  padding: 0.5rem 1rem;
+  border-radius: 0.375rem;
+  font-size: 0.875rem;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.mobileLoginButton {
+  border: 1px solid #f97316;
+  color: #f97316;
+  background-color: transparent;
+}
+
+.mobileRegisterButton {
+  background-color: #f97316;
+  color: white;
+}
+
+/* ==========================================
+   HERO SECTION STYLES
+   ========================================== */
+.heroSection {
+  padding-top: 7rem;
+  padding-bottom: 3rem;
+  background: linear-gradient(to bottom right, #fef3c7, white);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+.heroContainer {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2.5rem;
+  align-items: center;
+}
+
+@media (min-width: 768px) {
+  .heroContainer {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.heroTextContent {
+  display: flex;
+  flex-direction: column;
+}
+
+.heroMainHeading {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #1f2937;
+  line-height: 1.2;
+}
+
+.hallHighlight {
+  color: #f97316;
+}
+
+.heroDescription {
+  margin-top: 1.5rem;
+  color: #4b5563;
+  font-size: 1.125rem;
+  line-height: 1.6;
+}
+
+.heroCTAButtons {
+  display: flex;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.primaryCTA {
+  background-color: #f97316;
+  color: white;
+  padding: 0.75rem 2rem;
+  border-radius: 0.5rem;
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.primaryCTA:hover {
+  background-color: #ea580c;
+}
+
+.secondaryCTA {
+  border: 2px solid #f97316;
+  color: #f97316;
+  padding: 0.75rem 2rem;
+  border-radius: 0.5rem;
+  font-weight: 500;
+  background-color: transparent;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.secondaryCTA:hover {
+  background-color: #fef3c7;
+}
+
+.statsSection {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin-top: 3rem;
+}
+
+.statCard {
+  display: flex;
+  flex-direction: column;
+}
+
+.statNumber {
+  font-size: 1.875rem;
+  font-weight: bold;
+  color: #f97316;
+}
+
+.statLabel {
+  color: #4b5563;
+  font-size: 0.875rem;
+  margin-top: 0.25rem;
+}
+
+.heroImageArea {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .heroImageArea {
+    display: block;
+  }
+}
+
+.heroImage {
+  border-radius: 0.75rem;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  object-fit: cover;
+}
+
+/* ==========================================
+   ABOUT SECTION STYLES
+   ========================================== */
+.aboutSection {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+  background-color: white;
+}
+
+.aboutContentWrapper {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3rem;
+  align-items: center;
+}
+
+@media (min-width: 768px) {
+  .aboutContentWrapper {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.featureCard {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 0.75rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.featureCard:hover {
+  transform: translateY(-5px);
+}
+
+.featureIconContainer {
+  margin-bottom: 1.5rem;
+  display: flex;
+  justify-content: center;
+}
+
+.featureTitle {
+  font-weight: 600;
+  font-size: 1.25rem;
+  color: #1f2937;
+  margin-bottom: 0.75rem;
+}
+
+.featureDescription {
+  color: #4b5563;
+  font-size: 0.875rem;
+  line-height: 1.6;
+}
+
+/* ==========================================
+   SERVICES SECTION STYLES
+   ========================================== */
+.servicesSection {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+  background-color: #f9fafb;
+}
+
+.servicesGridContainer {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+@media (min-width: 768px) {
+  .servicesGridContainer {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.serviceCard {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 0.75rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.serviceCard:hover {
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+  transform: scale(1.05);
+}
+
+.serviceIconContainer {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.serviceIcon {
+  color: #f97316;
+  width: 2rem;
+  height: 2rem;
+}
+
+.serviceCardTitle {
+  font-weight: 600;
+  font-size: 1.125rem;
+  color: #1f2937;
+  margin-bottom: 0.5rem;
+}
+
+.serviceCardDescription {
+  color: #4b5563;
+  font-size: 0.875rem;
+  text-align: center;
+}
+
+/* ==========================================
+   HALLS SECTION STYLES
+   ========================================== */
+.banquetHallsSection {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+  background-color: white;
+}
+
+.hallsGridContainer {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+@media (min-width: 768px) {
+  .hallsGridContainer {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.hallCard {
+  background-color: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 0.75rem;
+  overflow: hidden;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.hallCard:hover {
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+}
+
+.hallImageContainer {
+  height: 12rem;
+  overflow: hidden;
+}
+
+.hallImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.hallImage:hover {
+  transform: scale(1.1);
+}
+
+.hallInfoSection {
+  padding: 1.5rem;
+}
+
+.hallCardTitle {
+  font-weight: bold;
+  font-size: 1.25rem;
+  color: #1f2937;
+  margin-bottom: 1rem;
+}
+
+.hallDetailsArea {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.capacityInfo,
+.priceInfo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #4b5563;
+}
+
+.capacityIcon,
+.priceIcon {
+  color: #f97316;
+  width: 1.125rem;
+  height: 1.125rem;
+}
+
+.hallDetailsArea {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.capacityInfo,
+.priceInfo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #4b5563;
+}
+
+.capacityIcon,
+.priceIcon {
+  color: #f97316;
+  width: 1.125rem;
+  height: 1.125rem;
+}
+
+.capacityText,
+.priceText {
+  font-size: 0.875rem;
+}
+
+.amenitiesContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.amenityBadge {
+  background-color: #fed7aa;
+  color: #b45309;
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+.viewDetailsButton {
+  width: 100%;
+  background-color: #f97316;
+  color: white;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.viewDetailsButton:hover {
+  background-color: #ea580c;
+}
+
+/* ==========================================
+   FEEDBACK SECTION STYLES
+   ========================================== */
+.feedbackSection {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+  background-color: white;
+}
+
+.feedbackGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+@media (min-width: 768px) {
+  .feedbackGrid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.feedbackCard {
+  background-color: #f9fafb;
+  padding: 2rem;
+  border-radius: 0.75rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.ratingContainer {
+  display: flex;
+  gap: 0.25rem;
+  margin-bottom: 1rem;
+}
+
+.ratingIcon {
+  color: #fbbf24;
+  fill: #fbbf24;
+}
+
+.feedbackContent {
+  font-style: italic;
+  color: #4b5563;
+  margin-bottom: 1.5rem;
+  flex: 1;
+}
+
+.clientInfo {
+  margin-top: auto;
+}
+
+.clientAvatar {
+  width: 3rem;
+  height: 3rem;
+  object-fit: cover;
+}
+
+.clientName {
+  font-weight: 600;
+  color: #1f2937;
+  font-size: 1rem;
+}
+
+.eventTag {
+  font-size: 0.75rem;
+  color: #6b7280;
+}
+
+/* ==========================================
+   CONTACT SECTION STYLES
+   ========================================== */
+.contactSection {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+  background-color: #f9fafb;
+}
+
+.contactContentGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3rem;
+}
+
+@media (min-width: 768px) {
+  .contactContentGrid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.formFieldLabel {
+  display: block;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #374151;
+  margin-bottom: 0.25rem;
+}
+
+.formInput,
+.formTextarea {
+  width: 100%;
+  padding: 0.625rem 0.75rem;
+  border: 1px solid #d1d5db;
+  border-radius: 0.375rem;
+  background-color: white;
+  transition: border-color 0.2s ease;
+}
+
+.formInput:focus,
+.formTextarea:focus {
+  outline: none;
+  border-color: #f97316;
+  box-shadow: 0 0 0 3px rgba(249, 115, 22, 0.1);
+}
+
+.feedbackGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+@media (min-width: 768px) {
+  .feedbackGrid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.feedbackCard {
+  background-color: #f3f4f6;
+  padding: 2rem;
+  border-radius: 0.75rem;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.feedbackCard:hover {
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+}
+
+.ratingContainer {
+  display: flex;
+  gap: 0.25rem;
+  margin-bottom: 1rem;
+}
+
+.ratingIcon {
+  color: #f97316;
+  width: 1rem;
+  height: 1rem;
+  fill: #f97316;
+}
+
+.feedbackContent {
+  color: #374151;
+  margin-bottom: 1.5rem;
+  font-style: italic;
+  line-height: 1.6;
+}
+
+.clientInfo {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.clientAvatar {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 9999px;
+  object-fit: cover;
+}
+
+.clientDetails {
+  display: flex;
+  flex-direction: column;
+}
+
+.clientName {
+  font-weight: 600;
+  color: #1f2937;
+}
+
+.eventTag {
+  font-size: 0.875rem;
+  color: #6b7280;
+}
+
+/* ==========================================
+   ABOUT SECTION STYLES
+   ========================================== */
+.aboutSection {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+  background-color: white;
+}
+
+.featuresGridContainer {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+@media (min-width: 768px) {
+  .featuresGridContainer {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.featureCard {
+  background-color: #fef3c7;
+  padding: 2rem;
+  border-radius: 0.75rem;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.featureCard:hover {
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+.featureIconContainer {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.featureIcon {
+  color: #f97316;
+  width: 2.5rem;
+  height: 2.5rem;
+}
+
+.featureTitle {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #1f2937;
+  margin-bottom: 0.5rem;
+}
+
+.featureDescription {
+  color: #4b5563;
+  line-height: 1.6;
+}
+
+.missionStatementBox {
+  background: linear-gradient(to right, #f97316, #dc2626);
+  color: white;
+  padding: 2rem;
+  border-radius: 0.75rem;
+  text-align: center;
+}
+
+.missionTitle {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.missionDescription {
+  font-size: 1.125rem;
+  line-height: 1.6;
+}
+
+/* ==========================================
+   CONTACT SECTION STYLES
+   ========================================== */
+.contactSection {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+  background-color: #f9fafb;
+}
+
+.contactContentGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3rem;
+}
+
+@media (min-width: 768px) {
+  .contactContentGrid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.contactInfoSection {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.emailContactBox,
+.phoneContactBox,
+.addressContactBox {
+  display: flex;
+  gap: 1rem;
+}
+
+.iconContainer {
+  flex-shrink: 0;
+}
+
+.contactIcon {
+  color: #f97316;
+  width: 2rem;
+  height: 2rem;
+}
+
+.emailDetailsBox,
+.phoneDetailsBox,
+.addressDetailsBox {
+  display: flex;
+  flex-direction: column;
+}
+
+.contactFieldTitle {
+  font-weight: 600;
+  font-size: 1.125rem;
+  color: #1f2937;
+}
+
+.contactFieldValue {
+  color: #4b5563;
+  line-height: 1.6;
+}
+
+.contactFormSection {
+  display: flex;
+  flex-direction: column;
+}
+
+.contactFormContainer {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 0.75rem;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+.successMessageBox {
+  margin-bottom: 1rem;
+  padding: 1rem;
+  background-color: #dcfce7;
+  border: 1px solid #86efac;
+  color: #166534;
+  border-radius: 0.5rem;
+  font-size: 0.875rem;
+}
+
+.modalFooter {
+  border-top: 1px solid #fed7aa;
+  text-align: center;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  font-size: 0.75rem;
+  background-color: #fff7ed;
+}
+
+/* ==========================================
+   MODAL & AUTH FORM STYLES
+   ========================================== */
+.modalTitle {
+  text-align: center;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  color: #f97316;
+}
+
+.errorBox {
+  margin-bottom: 1rem;
+  padding: 0.75rem;
+  background-color: #fee2e2;
+  border: 1px solid #f87171;
+  color: #b91c1c;
+  border-radius: 0.5rem;
+  font-size: 0.875rem;
+}
+
+.modalBanner {
+  color: white;
+  text-align: center;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  position: relative;
+  background: linear-gradient(to right, #f97316, #ea580c);
+}
+
+.formTextarea {
+  resize: none;
+}
+
+.submitButton {
+  width: 100%;
+  background-color: #f97316;
+  color: white;
+  padding: 0.75rem;
+  border-radius: 0.5rem;
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.submitButton:hover:not(:disabled) {
+  background-color: #ea580c;
+}
+
+.submitButton:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* ==========================================
+   RESPONSIVE UTILITIES
+   ========================================== */
+@media (max-width: 768px) {
+  .footerGridLayout {
+    grid-template-columns: 1fr;
+  }
+
+  .footerBottomLayout {
+    grid-template-columns: 1fr;
+  }
+
+  .footerCopyright {
+    text-align: center;
+  }
+
+  .footerCopyright.textLeft,
+  .footerCopyright.textRight {
+    text-align: center;
+  }
+
+  .footerBottomLinks {
+    justify-content: center;
+  }
+}
+
+/* ==========================================
+   MODAL & AUTH FORM STYLES
+   ========================================== */
+.scrimOverlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(8px);
+  z-index: 40;
+}
+
+.centeredModalWrapper {
+  position: fixed;
+  inset: 0;
+  z-index: 50;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.modalSurface {
+  width: 100%;
+  max-width: 28rem;
+  background-color: white;
+  border-radius: 0.75rem;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  overflow: hidden;
+}
+
+.modalBanner {
+  color: white;
+  text-align: center;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  position: relative;
+  background: linear-gradient(to right, #f97316, #ea580c);
+}
+
+.modalCloseButton {
+  position: absolute;
+  top: 0.75rem;
+  right: 0.75rem;
+  padding: 0.5rem;
+  border-radius: 9999px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.2s ease;
+}
+
+.modalCloseButton:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.modalBody {
+  padding: 1.5rem;
+}
+
+.modalTitle {
+  text-align: center;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  color: #f97316;
+}
+
+.errorBox {
+  margin-bottom: 1rem;
+  padding: 0.75rem;
+  background-color: #fee2e2;
+  border: 1px solid #f87171;
+  color: #b91c1c;
+  border-radius: 0.5rem;
+  font-size: 0.875rem;
+}
+
+.authDivider {
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+}
+
+.dividerLine {
+  flex-grow: 1;
+  border-top: 1px solid #fed7aa;
+}
+
+.dividerText {
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  font-size: 0.75rem;
+  color: #f97316;
+}
+
+.googleButton {
+  width: 100%;
+  border: 2px solid #fed7aa;
+  border-radius: 0.5rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  background: transparent;
+  cursor: pointer;
+  color: #f97316;
+  transition: background-color 0.3s ease;
+}
+
+.googleButton:hover {
+  background-color: rgba(254, 215, 170, 0.1);
+}
+
+.modalFooter {
+  border-top: 1px solid #fed7aa;
+  text-align: center;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  font-size: 0.75rem;
+  background-color: #fff7ed;
+}
+
+.footerLinkButton {
+  font-weight: 500;
+  text-decoration: underline;
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: 0;
+  color: #f97316;
+}
+
+.footerLinkButton:hover {
+  color: #ea580c;
+}
+
+/* ==========================================
+   PROFILE DASHBOARD STYLES
+   ========================================== */
+.dashboardWrapper {
+  min-height: 100vh;
+  background-color: #F8F9FA;
+}
+
+.dashboardHeader {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background-color: white;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  height: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .dashboardHeader {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+}
+
+.dashboardMain {
+  max-width: 80rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .dashboardMain {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+}
+
+.profileGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+@media (min-width: 1024px) {
+  .profileGrid {
+    grid-template-columns: repeat(12, 1fr);
+  }
+}
+
+.profileSidebar {
+  grid-column: span 1;
+}
+
+@media (min-width: 1024px) {
+  .profileSidebar {
+    grid-column: span 4;
+  }
+}
+
+.profileContentArea {
+  grid-column: span 1;
+}
+
+@media (min-width: 1024px) {
+  .profileContentArea {
+    grid-column: span 8;
+  }
+}
+
+.infoCard {
+  background-color: white;
+  border-radius: 0.75rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.profileAvatar {
+  width: 6rem;
+  height: 6rem;
+  border-radius: 9999px;
+  background-color: rgba(249, 115, 22, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #f97316;
+  font-size: 1.875rem;
+  font-weight: bold;
+}
+
+.tableWrapper {
+  overflow-x: auto;
+}
+
+.dataTable {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.tableHeaderCell {
+  padding: 0.75rem 1.5rem;
+  text-align: left;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: #6b7280;
+  letter-spacing: 0.05em;
+  background-color: #f9fafb;
+  border-bottom: 1px solid #f3f4f6;
+}
+
+.tableBodyRow {
+  transition: background-color 0.2s ease;
+  border-bottom: 1px solid #f3f4f6;
+}
+
+.tableBodyRow:hover {
+  background-color: #f9fafb;
+}
+
+.tableCell {
+  padding: 1rem 1.5rem;
+  font-size: 0.875rem;
+  color: #1f2937;
+}
+
+.statusBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375rem;
+  padding: 0.25rem 0.625rem;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+.statusBadgeCompleted {
+  background-color: #f0fdf4;
+  color: #15803d;
+  border: 1px solid #dcfce7;
+}
+
+.statusBadgeUpcoming {
+  background-color: #eff6ff;
+  color: #1d4ed8;
+  border: 1px solid #dbeafe;
+}
+
+.modalOverlayZ60 {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 60;
+}
+
+.modalContainerZ60 {
+  position: fixed;
+  inset: 0;
+  z-index: 60;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.z-60 {
+  z-index: 60 !important;
+}
+
+.checkboxSection {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  color: #4b5563;
+  font-size: 0.75rem;
+}
+
+.cancelButton {
+  width: 100%;
+  border: 1px solid #e5e7eb;
+  color: #6b7280;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  border-radius: 0.5rem;
+  font-weight: 500;
+  background-color: transparent;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.cancelButton:hover {
+  background-color: #f9fafb;
+}
+
+.successCheckmark {
+  width: 4rem;
+  height: 4rem;
+  background-color: #f0fdf4;
+  border-radius: 9999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #22c55e;
+  font-size: 1.875rem;
+  font-weight: bold;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.centeredText {
+  text-align: center;
+}
+
+.helperText {
+  font-size: 0.75rem;
+  color: #6b7280;
+  line-height: 1.6;
+}
+
+.dashboardHeaderActions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.headerIconButton {
+  padding: 0.5rem;
+  color: #f97316;
+  border-radius: 9999px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  transition: background-color 0.2s ease;
+}
+
+.headerIconButton:hover {
+  background-color: #fff7ed;
+}
+
+.logoutIconButton {
+  padding: 0.5rem;
+  color: #f97316;
+  border-radius: 9999px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.logoutIconButton:hover {
+  background-color: #fff7ed;
+  color: #dc2626;
+}
+
+.notificationDot {
+  position: absolute;
+  top: 0.25rem;
+  right: 0.25rem;
+  width: 0.5rem;
+  height: 0.5rem;
+  background-color: #ef4444;
+  border-radius: 9999px;
+}
+
+/* ============================== */
+.avatarOverlay {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 10;
+}
+
+.avatarContainer:hover .avatarOverlay {
+  opacity: 1;
+}
+
+/* End of Abstract Semantic Tokens */
+/* ==============================
+   Abstract Semantic Tokens
+   ============================== */
+.primarySurface {
+  background-color: #f97316;
+}
+
+.primaryText {
+  color: #f97316;
+}
+
+.onPrimaryText {
+  color: white;
+}
+
+.softSurface {
+  background-color: #f9fafb;
+}
+
+.accentHighlight {
+  background-color: #fef3c7;
+}
+
+.subtleBorder {
+  border: 1px solid #e5e7eb;
+}
+
+.darkText {
+  color: #1f2937;
+}
+
+.mutedText {
+  color: #6b7280;
+}
+
+.errorText {
+  color: #dc2626;
+}
+
+.errorSurface {
+  background-color: #fee2e2;
+}
+
+.inlineAlignedGroupMd {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.inlineAlignedGroupLg {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.cardRadius {
+  border-radius: 0.75rem;
+}
+
+.circleRadius {
+  border-radius: 9999px;
+}
+
+.subtleShadow {
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.avatarContainer {
+  position: relative;
+}
+
+.avatarContainer:hover .scrimOverlay {
+  opacity: 1;
+}
+
+.infoCardHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.formFieldsList {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.actionButtonsGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.fontMedium {
+  font-weight: 500;
+}
+
+.smallItalicText {
+  font-size: 0.75rem;
+  font-style: italic;
+  line-height: 1.6;
+}
+
+.timestampLabel {
+  margin-top: 0.75rem;
+  font-size: 0.625rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #9ca3af;
+}
+
+.cardHeaderContent {
+  padding: 1.25rem 1.5rem;
+  border-bottom: 1px solid #f3f4f6;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.layoutResponsiveGrid2 {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .layoutResponsiveGrid2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.layoutResponsiveGrid3 {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .layoutResponsiveGrid3 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.subHeaderInlineGroup {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+
+
+.modalBanner {
+  color: white;
+  text-align: center;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  position: relative;
+  background: linear-gradient(to right, #f97316, #ea580c);
+}
+
+.clientMobileNavLink:hover {
+  color: #f97316;
+}
+
+.clientMobileAuthButtons {
+  display: flex;
+  gap: 0.75rem;
+  padding-top: 0.5rem;
+}
+
+.clientMobileLoginButton,
+.clientMobileRegisterButton {
+  flex: 1;
+  padding: 0.5rem 1rem;
+  border-radius: 0.375rem;
+  font-size: 0.875rem;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.clientMobileLoginButton {
+  border: 1px solid #f97316;
+  color: #f97316;
+  background-color: transparent;
+}
+
+.clientMobileLoginButton:hover {
+  background-color: #fef3c7;
+}
+
+.clientMobileRegisterButton {
+  background-color: #f97316;
+  color: white;
+}
+
+.clientMobileRegisterButton:hover {
+  background-color: #ea580c;
+}
+
+/* Dashboard Semantic Classes */
+.clientDashboardWrapper {
+  display: flex;
+  height: 100vh;
+  background-color: #f3f4f6;
+}
+
+.clientDashboardHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background-color: #1f2937;
+  color: white;
+}
+
+.clientDashboardHeaderActions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.clientDashboardLogoutButton {
+  padding: 0.5rem;
+  color: #f97316;
+  border-radius: 9999px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.clientDashboardLogoutButton:hover {
+  background-color: #fff7ed;
+  color: #dc2626;
+}
+
+.clientDashboardMain {
+  flex: 1;
+  overflow: auto;
+  padding: 2.5rem;
+}
+
+.clientDashboardProfileGrid {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 2rem;
+}
+
+.clientDashboardInfoCard {
+  background-color: white;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.clientDashboardTableWrapper {
+  overflow-x: auto;
+}
+
+.clientDashboardDataTable {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.clientDashboardTableHeaderCell {
+  background-color: #f9fafb;
+  font-weight: 600;
+  text-align: left;
+  padding: 0.75rem;
+}
+
+.clientDashboardTableBodyRow:hover {
+  background-color: #f3f4f6;
+}
+
+.clientDashboardTableCell {
+  padding: 0.75rem;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.clientDashboardStatusCompleted {
+  background-color: #d1fae5;
+  color: #065f46;
+  padding: 0.25rem 0.5rem;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.clientDashboardStatusUpcoming {
+  background-color: #fef3c7;
+  color: #92400e;
+  padding: 0.25rem 0.5rem;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+/* Modal Semantic Classes */
+.clientModalOverlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 60;
+}
+
+.clientModalContainer {
+  position: relative;
+  background-color: white;
+  border-radius: 0.5rem;
+  width: 100%;
+  max-width: 28rem;
+  max-height: 90vh;
+  overflow-y: auto;
+  padding: 1.5rem;
+}
+
+.clientModalHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.clientModalCloseButton {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.clientErrorBox {
+  background-color: #fee2e2;
+  color: #b91c1c;
+  padding: 0.75rem;
+  border-radius: 0.375rem;
+  margin-bottom: 1rem;
+}
+
+.clientSuccessBox {
+  background-color: #d1fae5;
+  color: #065f46;
+  padding: 0.75rem;
+  border-radius: 0.375rem;
+  margin-bottom: 1rem;
+}
+
+.clientPrimaryButton {
+  background-color: #f97316;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 0.375rem;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.clientPrimaryButton:hover {
+  background-color: #ea580c;
+}
+
+.clientSecondaryButton {
+  background-color: transparent;
+  border: 1px solid #e5e7eb;
+  color: #6b7280;
+  padding: 0.5rem 1rem;
+  border-radius: 0.375rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.clientSecondaryButton:hover {
+  background-color: #f9fafb;
+}
+
+.clientCenteredText {
+  text-align: center;
+}
+
+.clientHelperText {
+  font-size: 0.75rem;
+  color: #6b7280;
+  line-height: 1.6;
+}
+
+.clientSuccessCheckmark {
+  width: 4rem;
+  height: 4rem;
+  background-color: #f0fdf4;
+  border-radius: 9999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #22c55e;
+  font-size: 1.875rem;
+  font-weight: bold;
+  margin: auto;
+}
+
+/* Profile Semantic Classes */
+.clientProfileAvatar {
+  width: 2.25rem;
+  height: 2.25rem;
+  background-color: #f97316;
+  color: white;
+  font-weight: bold;
+  font-size: 1rem;
+  border-radius: 9999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.clientFormGroup {
+  position: relative;
+  margin-bottom: 1rem;
+}
+
+.clientFormInput {
+  width: 100%;
+  padding: 0.5rem 0.75rem;
+  border: 1px solid #d1d5db;
+  border-radius: 0.375rem;
+}
+
+.clientFeedbackGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1rem;
+}
+
+.clientFeedbackCard {
+  background-color: #f3f4f6;
+  padding: 1rem;
+  border-radius: 0.5rem;
+}
+
+.clientHallInfoCard {
+  /* reuse infoCard styles */
+}
+
+.clientHallRatingStars {
+  display: flex;
+  gap: 0.25rem;
+}
+
+/* Utility Semantic Wrappers */
+.layoutFlexCenter {
+  display: flex;
+  align-items: center;
+}
+
+.layoutFlexJustifyBetween {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.layoutFlexCenterGap3 {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.layoutFlexCenterGap4 {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.textBrandPrimary {
+  color: #f97316;
+}
+
+.bgBrandPrimary {
+  background-color: #f97316;
+}
+
+.textGray500 {
+  color: #6b7280;
+}
+
+.textGray600 {
+  color: #4b5563;
+}
+
+.textGray900 {
+  color: #1f2937;
+}
+
+.bgWhite {
+  background-color: white;
+}
+
+.bgGray50 {
+  background-color: #f9fafb;
+}
+
+.bgStone800 {
+  background-color: #1f2937;
+}
+
+.borderGray200 {
+  border-color: #e5e7eb;
+}
+
+.roundedMd {
+  border-radius: 0.375rem;
+}
+
+.padding4 {
+  padding: 1rem;
+}
+
+.marginTop2 {
+  margin-top: 0.5rem;
+}
+
+.marginBottom2 {
+  margin-bottom: 0.5rem;
+}
+
+/* End of Semantic Definitions */
+
+/* ==========================================
+   PAYMENT SUCCESS MODAL STYLES
+   ========================================== */
+.paymentModalWrapper {
+  position: fixed;
+  inset: 0;
+  z-index: 50;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.successModalOverlay {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(4px);
+  transition: opacity 0.3s ease;
+}
+
+.paymentSuccessContent {
+  position: relative;
+  background-color: white;
+  border-radius: 1rem;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  width: 100%;
+  max-width: 28rem;
+  padding: 1.5rem;
+  animation: modalZoomIn 0.2s ease-out forwards;
+}
+
+@media (min-width: 640px) {
+  .paymentSuccessContent {
+    padding: 2rem;
+  }
+}
+
+@keyframes modalZoomIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.closeModalBtn {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  color: #9ca3af;
+  transition: color 0.15s ease;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+.closeModalBtn:hover {
+  color: #4b5563;
+}
+
+.paymentStatusHeader {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.successIconWrapper {
+  width: 5rem;
+  height: 5rem;
+  background-color: #dcfce7;
+  border-radius: 9999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+}
+
+.successIconInner {
+  width: 4rem;
+  height: 4rem;
+  background-color: #22c55e;
+  border-radius: 9999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 10px 15px -3px rgba(187, 247, 208, 0.5);
+}
+
+.successCheckIcon {
+  color: white;
+}
+
+.statusTitle {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #111827;
+  margin-bottom: 0.5rem;
+}
+
+.statusMessage {
+  color: #4b5563;
+}
+
+.transactionDetailCard {
+  background-color: #f9fafb;
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  border: 1px solid #f3f4f6;
+}
+
+.transactionInfoContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.transactionRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.875rem;
+}
+
+.transactionLabel {
+  color: #6b7280;
+}
+
+.transactionValue {
+  font-weight: 700;
+  color: #111827;
+}
+
+.modalActionButtons {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+@media (min-width: 640px) {
+  .modalActionButtons {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.invoiceDownloadBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.75rem 1rem;
+  background-color: white;
+  border: 1px solid #d1d5db;
+  color: #374151;
+  font-weight: 600;
+  border-radius: 0.75rem;
+  transition: background-color 0.15s ease;
+  cursor: pointer;
+}
+
+.invoiceDownloadBtn:hover {
+  background-color: #f9fafb;
+}
+
+.backHomeBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.75rem 1rem;
+  background-color: #f97316;
+  color: white;
+  font-weight: 600;
+  border-radius: 0.75rem;
+  transition: background-color 0.15s ease, box-shadow 0.15s ease;
+  box-shadow: 0 10px 15px -3px rgba(249, 115, 22, 0.3);
+  text-decoration: none;
+}
+
+/* ==========================================
+   FORGOT PASSWORD MODAL STYLES
+   ========================================== */
+.forgotPasswordModalSurface {
+  position: relative;
+  background-color: white;
+  border-radius: 1rem;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 28rem;
+  overflow: hidden;
+}
+
+.forgotPasswordHeader {
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.forgotPasswordTitle {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #f97316;
+}
+
+.forgotPasswordCloseBtn {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  color: #6b7280;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+  border-radius: 9999px;
+  transition: background-color 0.2s ease;
+}
+
+.forgotPasswordCloseBtn:hover {
+  background-color: #f3f4f6;
+}
+
+.forgotPasswordBody {
+  padding: 2rem;
+}
+
+.errorMessageBox {
+  margin-bottom: 1rem;
+  padding: 0.75rem;
+  background-color: #fee2e2;
+  border: 1px solid #f87171;
+  color: #b91c1c;
+  border-radius: 0.5rem;
+  font-size: 0.875rem;
+}
+
+.successMessageBox {
+  margin-bottom: 1rem;
+  padding: 0.75rem;
+  background-color: #dcfce7;
+  border: 1px solid #86efac;
+  color: #166534;
+  border-radius: 0.5rem;
+  font-size: 0.875rem;
+}
+
+.formFieldsList {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.formFieldGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.primarySubmitBtn {
+  width: 100%;
+  background-color: #f97316;
+  color: white;
+  padding: 0.75rem;
+  border-radius: 0.5rem;
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.primarySubmitBtn:hover:not(:disabled) {
+  transform: scale(1.02);
+  background-color: #ea580c;
+}
+
+.primarySubmitBtn:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.otpInstructionWrapper {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.otpInstructionText {
+  color: #6b7280;
+  font-size: 0.875rem;
+}
+
+.otpEmailHighlight {
+  font-weight: 500;
+  color: #1f2937;
+}
+
+.otpInput {
+  width: 100%;
+  padding: 0.625rem 0.75rem;
+  border: 1px solid #d1d5db;
+  border-radius: 0.375rem;
+  text-align: center;
+  font-size: 1.25rem;
+  letter-spacing: 0.1em;
+  font-weight: 700;
+  background-color: white;
+}
+
+.otpInput:focus {
+  outline: none;
+  border-color: #f97316;
+  box-shadow: 0 0 0 3px rgba(249, 115, 22, 0.1);
+}
+
+.otpResendWrapper {
+  text-align: center;
+  font-size: 0.75rem;
+  color: #6b7280;
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.resendOtpBtn {
+  background: none;
+  border: none;
+  color: #f97316;
+  text-decoration: underline;
+  cursor: pointer;
+  padding: 0;
+  font-size: 0.75rem;
+}
+
+.resendOtpBtn:disabled {
+  color: #9ca3af;
+  cursor: not-allowed;
+  text-decoration: none;
+}
+
+.pwdResetSuccessWrapper {
+  text-align: center;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.successCircleIcon {
+  width: 4rem;
+  height: 4rem;
+  background-color: #f97316;
+  color: white;
+  border-radius: 9999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+/* ==========================================
+   HERO SECTION SEMANTIC STYLES
+   ========================================== */
+.heroContentGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  align-items: center;
+}
+
+@media (min-width: 768px) {
+  .heroContentGrid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.heroCtaWrapper {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.heroPrimaryBtn {
+  background-color: #f97316;
+  color: white;
+  padding: 0.75rem 2rem;
+  border-radius: 0.5rem;
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.heroPrimaryBtn:hover {
+  background-color: #ea580c;
+}
+
+.heroSecondaryBtn {
+  background-color: transparent;
+  color: #f97316;
+  border: 1px solid #f97316;
+  padding: 0.75rem 2rem;
+  border-radius: 0.5rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.heroSecondaryBtn:hover {
+  background-color: #fff7ed;
+}
+
+.heroStatsGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin-top: 3rem;
+}
+
+.heroStatCard {
+  background-color: #fff7ed;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ==========================================
+   HALLS SECTION SEMANTIC STYLES
+   ========================================== */
+.hallsGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+@media (min-width: 768px) {
+  .hallsGrid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.hallDetailsContainer {
+  margin-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.hallDetailRow {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.hallAmenitiesWrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.hallAmenityTag {
+  background-color: #ffedd5;
+  color: #f97316;
+  border-radius: 9999px;
+  padding: 0.25rem 0.75rem;
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+.hallViewDetailsBtn {
+  width: 100%;
+  background-color: #f97316;
+  color: white;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.hallViewDetailsBtn:hover {
+  background-color: #ea580c;
+  color: white;
+}
